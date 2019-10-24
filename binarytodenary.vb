@@ -35,25 +35,17 @@
             Console.WriteLine("not a valid binary number")
         End If
 
-            If validBinaryString = True Then
-            For count = Len(str1) To 1 Step -1
+    If validBinaryString = True Then
+    For count = Len(str1) To 1 Step -1
 
 
 
                 nextchar = Mid(str1, count, 1)
-                If nextchar = "1" Then
-                    value = nextchar * (2 ^ (count - 1))
-                    denarynum = denarynum + value
-                Else
-                    denarynum = denarynum + 0
-                End If
-
-
-
-
-            Next
-            End If
+        value = nextchar * (2 ^ (Len(str1)-count))
+        denarynum = denarynum + value
+    Next   
             Console.WriteLine(str1 & "=" & denarynum)
+    EndIf
             Console.ReadKey()
     End Sub
 
